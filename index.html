@@ -1,0 +1,330 @@
+<!-- <?php
+$title = " Heidi Ulrich | Plan van Aanpak 3.0 ";
+$modified = date("l, dS F, Y @ h:ia", filemtime("index.php"));
+?>
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<?php
+if (date('w') != 0)	
+	{
+	if (date('w') <= 5)
+		{
+		$dist = ((date('W')-7)*300) + ((date('w')-1) * 60) + ((date('G')+1)*2.5);
+		}
+	else
+		{
+		$dist = ((date('W')-7)*300) + 300;
+		}
+	}
+else
+	{
+	$dist = ((date('W')-7)*300) + 300;
+	} 
+?> -->
+<head>
+<title>Heidi Ulrich | Plan van Aanpak</title>
+<link rel='icon' href='favicon.ico' type='image/x-icon' />
+<link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
+<style type='text/css' media='screen'>
+body		{margin: 0px; padding: 0px; background-color: #0c0c0c; background-image: url('gfx/pagebg.jpg'); background-repeat: repeat-x; font-family: Segoe UI, sans-serif;}
+h1			{z-index: 100; margin: 5px 0px 0px 100px; padding: 0px; font-size: 1.5em; font-weight: bold; color: #fff;}
+h4			{display: none;}
+h5			{z-index: 101; width: 100px; margin: 600px 0px 0px 1px; padding: 0px; font-size: .75em; font-weight: bold; color: #fff; text-align: center;}
+h6			{z-index: 101; margin: -2px 0px 0px 100px; padding: 0px; font-size: .75em; font-weight: normal; color: #fff;}
+.wrapper	{z-index: 50; position: absolute; left: 100px; top: 50px; width: 6300px; margin-right: 100px;}
+.line		{display: block; margin: 0px; padding: 0px; list-style-type: none; width: 6300px; background-color: #222222; border-top: 1px solid #000; }
+.line li	{width: 300px;}
+#blobs		{height: 140px; background-color: transparent; font-size: .75em; border: none;}
+#time		{height: 50px; background-color: #0c0c0c; color: #fff; border: none;}
+#phase		{height: 35px;}
+#work		{height: 70px;}	
+#thesis		{height: 70px;}
+#sketching	{height: 35px;}
+#essays		{height: 35px;}
+#times_oamk {height: 35px;}
+#times_sax	{height: 35px;}
+#blockref	{height: 100px; background-image: url('gfx/blockref.jpg');}
+.blobber	{float: left; margin: 0px; padding: 0px; height: 140px; vertical-align: top; text-align: left; background-image: url('gfx/blobbg.png'); background-position: bottom left; background-repeat: no-repeat; border-bottom: 1px solid #000; -moz-border-radius:4px;}
+.blobber a	{display: block; width: 290px; height: 130px; margin: 5px; padding: 0px; overflow: auto;}
+.blobber a, .blobber a:hover, .blobber a:active, .blobber a:visited {color: #0c0c0c; text-decoration: none;}
+.timeblock	{float: left; margin: 0px; padding: 0px; height: 50px; line-height: 1em; vertical-align: top; text-align: left;}
+#btime		{background-image: url('gfx/weekbg.gif');}
+#btime span	{color: #444444;}
+ul			{color: #fff;}
+.bigblock	{float: left; margin: 10px 0px 0px 0px; padding: 0px; height: 50px; line-height: 50px; vertical-align: middle; text-align: center; background-image: url('gfx/grad2.png'); background-position: top right; background-repeat: repeat-x; border-bottom: 1px solid #000; -moz-border-radius:4px;}
+#bwork		{background-color: #81c115;}
+#bthesis	{background-color: #30017d;}
+.lilblock	{float: left; margin: 5px 0px 0px 0px; padding: 0px; height: 25px; vertical-align: middle; text-align: center; background-image: url('gfx/grad1.png'); background-position: top right; background-repeat: repeat-x; border-bottom: 1px solid #000; -moz-border-radius:4px;}
+#bsketch	{background-color: #4A6B6B;}
+#bessay		{background-color: #06002F;}
+#bphase		{background-color: #241f1a;}
+#boamk		{background-color: #e76200;}
+#bsax		{background-color: #428837;}
+#boff		{background-color: none; background-image: none; border: none;}
+.sidel		{z-index: 70; position: absolute; left: 0px; top: 344px;}
+.sider		{z-index: 70; position: absolute; left: 6400px; top: 344px;}
+
+.walle		{z-index: 95; position: absolute; margin: 495px 0px 0px 10px;}
+.deadline	{z-index: 90; position: absolute; margin: 0px 0px 0px 100px; height: 570px; width: 1px; background-color: #f00;}
+
+.legenda	{z-index: 80; position: absolute; left: 0px; top: 240px; margin: 0px 0px 0px 1px; padding: 0px; list-style-type: none; font-size: .75em; width: 100px;}
+.schemep	{display: none;}
+.schemeb	{height: 70px; line-height: 70px; vertical-align: middle;}
+.schemel	{height: 35px; line-height: 35px; vertical-align: middle;}
+.clear		{display: none;}
+</style>
+<style type='text/css' media='print'>
+body {margin: 0px; padding: 0px; font-family: Segoe UI, sans-serif; font-size: .75em;}
+img {display: none;}
+h1 {margin: 0px; padding: 0px; font-size: 1.5em;}
+h4 {margin: 0px; padding: 0px; font-size: .75em; float: right; font-weight: normal;}
+h5 {display: none;}
+h6 {margin: 0px; padding: 0px 0px 2em 0px; font-size: .75em;}
+.deadline {display: none;}
+#blockref {display: none;}
+
+ul {margin: 0px; padding: 0px 0px 1em 0px; list-style-type: none; float: left;}
+ul li {margin: 2px; padding: 2px; width: 2.1cm; line-height: 1em; height: 0.95cm; border: 1px solid #CCC; overflow: hidden; white-space: nowrap; -moz-border-radius:2px;}
+.legenda li {float: left; height: 2em; margin-bottom: -10px; border-bottom: 5px solid #CCC; font-size: .75em; font-weight: bold;}
+#blobs li {display: none;}
+#btime { font-size: .75em;}
+.clear {clear: both;}
+</style>
+</head>
+
+<body>
+<h4>Best printed with Mozilla Firefox</h4><h1>Heidi Ulrich | Plan van Aanpak</h1>
+<h6>Last modified: this is a static snapshot.</h6>
+<ul class="legenda">
+	<li class="schemep">&nbsp;</li>	
+	<li class="schemel">Concept Scheme</li>
+	<li class="schemeb">Daily work</li>
+	<li class="schemeb">Thesis</li>
+	<li class="schemel">Saxion Sketching</li>
+	<li class="schemel">UT Essays</li>
+	<li class="schemel">OAMK Schedule</li>
+	<li class="schemel">Saxion Schedule</li>
+</ul>
+<div class="clear"></div>
+<img class="walle" style="left: 6060px;" src="gfx/walle.png" />
+<div class="deadline" style="left: 6060px;"></div><!-- x -->
+<div class="wrapper">
+<ul class="line" id="blobs">
+	<li class="blobber" id="blob01"><a href="#" OnMouseover="document.getElementById('blob01').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob01').style.backgroundColor='transparent';">Met with Heikki on tuesday. Skyped with Guus. Filled out forms with Heikki. Friday: met with Henri and Jenni.</a></li>			<!-- 1 -->
+	<li class="blobber" id="blob02"><a href="#" OnMouseover="document.getElementById('blob02').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob02').style.backgroundColor='transparent';"><i>Heikki to Australia. Guus on holiday.</i> Interview ready. Met with Jussi. Interviews postponed to next monday.<br>Planned sketching and the writing of the essays.<br>Sent out invitations to the teachers of the School of Music, Dance and Media for the interview.</a></li>			<!-- 2 -->
+	<li class="blobber" id="blob03"><a href="#" OnMouseover="document.getElementById('blob03').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob03').style.backgroundColor='transparent';"><i>Heikki to Australia.</i> Meeting with Jussi. Interviewed Tomi. Received guidelines for bachelor thesis. Had an update conversation with Guus on monday. Will Skype on tuesday. Will interview Veikko on thursday, Pasi Särkelä on friday.</a></li>		<!-- 3 -->
+	<li class="blobber" id="blob04"><a href="#" OnMouseover="document.getElementById('blob04').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob04').style.backgroundColor='transparent';"><i>Heikki to Australia.</i> Holiday, but school is open. Skype with Guus on Thursday.</a></li>		<!-- 4 -->
+	<li class="blobber" id="blob05"><a href="#" OnMouseover="document.getElementById('blob05').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob05').style.backgroundColor='transparent';">Interview Iikka Tolonen this week.</a></li>		<!-- 5 -->
+	<li class="blobber" id="blob06"><a href="#" OnMouseover="document.getElementById('blob06').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob06').style.backgroundColor='transparent';">No updates so far.</a></li>	<!-- 6 -->
+	<li class="blobber" id="blob07"><a href="#" OnMouseover="document.getElementById('blob07').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob07').style.backgroundColor='transparent';">No updates so far.</a></li>		<!-- 7 -->
+	<li class="blobber" id="blob08"><a href="#" OnMouseover="document.getElementById('blob08').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob08').style.backgroundColor='transparent';">No updates so far.</a></li>		<!-- 8 -->
+	<li class="blobber" id="blob09"><a href="#" OnMouseover="document.getElementById('blob09').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob09').style.backgroundColor='transparent';">No updates so far.</a></li>	<!-- 9 -->
+	<li class="blobber" id="blob10"><a href="#" OnMouseover="document.getElementById('blob10').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob10').style.backgroundColor='transparent';">No updates so far.</a></li>		<!-- 10 -->
+	<li class="blobber" id="blob11"><a href="#" OnMouseover="document.getElementById('blob11').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob11').style.backgroundColor='transparent';">No updates so far.</a></li>		<!-- 11 -->
+	<li class="blobber" id="blob12"><a href="#" OnMouseover="document.getElementById('blob12').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob12').style.backgroundColor='transparent';">No updates so far.</a></li>		<!-- 12 -->
+	<li class="blobber" id="blob13"><a href="#" OnMouseover="document.getElementById('blob13').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob13').style.backgroundColor='transparent';">No updates so far.</a></li>		<!-- 13 -->
+	<li class="blobber" id="blob14"><a href="#" OnMouseover="document.getElementById('blob14').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob14').style.backgroundColor='transparent';">No updates so far.</a></li>		<!-- 14 -->
+	<li class="blobber" id="blob15"><a href="#" OnMouseover="document.getElementById('blob15').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob15').style.backgroundColor='transparent';">No updates so far.</a></li>		<!-- 15 -->
+	<li class="blobber" id="blob16"><a href="#" OnMouseover="document.getElementById('blob16').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob16').style.backgroundColor='transparent';">Leaving Finland at the end of this week.</a></li>			<!-- 16 -->
+	<li class="blobber" id="blob17"><a href="#" OnMouseover="document.getElementById('blob17').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob17').style.backgroundColor='transparent';">Back in Holland, back to daily life.</a></li>			<!-- 17 -->
+	<li class="blobber" id="blob18"><a href="#" OnMouseover="document.getElementById('blob18').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob18').style.backgroundColor='transparent';">No updates so far.</a></li>		<!-- 18 -->
+	<li class="blobber" id="blob19"><a href="#" OnMouseover="document.getElementById('blob19').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob19').style.backgroundColor='transparent';">No updates so far.</a></li>		<!-- 19 -->
+	<li class="blobber" id="blob20"><a href="#" OnMouseover="document.getElementById('blob20').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob20').style.backgroundColor='transparent';">No updates so far.</a></li>		<!-- 20 -->
+	<li class="blobber" id="blob21"><a href="#" OnMouseover="document.getElementById('blob21').style.backgroundColor='#fff';" OnMouseout="document.getElementById('blob21').style.backgroundColor='transparent';">No updates so far.</a></li>		<!-- 21 -->
+</ul>
+<ul class="line" id="time">
+	<li class="timeblock" id="btime">&nbsp;week 1<br>&nbsp;9.02-13.02<br><span>&nbsp;7</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 2<br>&nbsp;16.02-20.02<br><span>&nbsp;8</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 3<br>&nbsp;23.02-27.02<br><span>&nbsp;9</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 4<br>&nbsp;2.03-6.03<br><span>&nbsp;10</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 5<br>&nbsp;9.03-13.03<br><span>&nbsp;11</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 6<br>&nbsp;16.03-20.03<br><span>&nbsp;12</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 7<br>&nbsp;23.03-27.03<br><span>&nbsp;13</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 8<br>&nbsp;30.03-3.04<br><span>&nbsp;14</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 9<br>&nbsp;6.04-10.04<br><span>&nbsp;15</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 10<br>&nbsp;13.04-17.04<br><span>&nbsp;16</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 11<br>&nbsp;20.04-24.04<br><span>&nbsp;17</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 12<br>&nbsp;27.04-1.05<br><span>&nbsp;18</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 13<br>&nbsp;4.05-8.05<br><span>&nbsp;19</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 14<br>&nbsp;11.05-15.05<br><span>&nbsp;20</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 15<br>&nbsp;18.05-22.05<br><span>&nbsp;21</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 16<br>&nbsp;25.05-29.05<br><span>&nbsp;22</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 17<br>&nbsp;1.06-5.06<br><span>&nbsp;23</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 18<br>&nbsp;8.06-12.06<br><span>&nbsp;24</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 19<br>&nbsp;15.06-19.06<br><span>&nbsp;25</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 20<br>&nbsp;22.06-26.06<br><span>&nbsp;26</span></li>
+	<li class="timeblock" id="btime">&nbsp;week 21<br>&nbsp;29.06-3.07<br><span>&nbsp;27</span></li>
+</ul>
+<ul class="line" id="phase">
+	<li class="lilblock" id="bphase">input</li>
+	<li class="lilblock" id="bphase">input</li>
+	<li class="lilblock" id="bphase">analysis</li>
+	<li class="lilblock" id="bphase">analysis</li>
+
+	<li class="lilblock" id="bphase">analysis</li>
+	<li class="lilblock" id="bphase">analysis</li>
+	<li class="lilblock" id="bphase">analysis</li>
+	<li class="lilblock" id="bphase">design</li>
+
+	<li class="lilblock" id="bphase">design</li>
+	<li class="lilblock" id="bphase">design</li>
+	<li class="lilblock" id="bphase">design</li>
+	<li class="lilblock" id="bphase">design</li>
+
+	<li class="lilblock" id="bphase">design</li>
+	<li class="lilblock" id="bphase">design</li>
+	<li class="lilblock" id="bphase">presentation</li>
+	<li class="lilblock" id="boff">&nbsp;</li>
+
+	<li class="lilblock" id="boff">&nbsp;</li>
+	<li class="lilblock" id="bphase">presentation</li>
+	<li class="lilblock" id="bphase">presentation</li>
+	<li class="lilblock" id="bphase">presentation</li>
+	<li class="lilblock" id="bphase">presentation</li>
+</ul>
+<ul class="line" id="work">
+	<li class="bigblock" id="bwork">Meetings</li>			<!-- 1 -->
+	<li class="bigblock" id="bwork">&nbsp;</li>			<!-- 2 -->
+	<li class="bigblock" id="bwork">Interviews & Desk research</li>		<!-- 3 -->
+	<li class="bigblock" id="bwork">Desk research</li>		<!-- 4 -->
+	<li class="bigblock" id="bwork">Interviews & Desk research</li>		<!-- 5 -->
+	<li class="bigblock" id="bwork">Interviews & Data analysis</li>	<!-- 6 -->
+	<li class="bigblock" id="bwork">Data & Umfeld analysis</li>		<!-- 7 -->
+	<li class="bigblock" id="bwork">Concept one</li>		<!-- 8 -->
+	<li class="bigblock" id="bwork">Concept two</li>	<!-- 9 -->
+	<li class="bigblock" id="bwork">Concept three</li>		<!-- 10 -->
+	<li class="bigblock" id="bwork">Concept four</li>		<!-- 11 -->
+	<li class="bigblock" id="bwork">Reflection</li>		<!-- 12 -->
+	<li class="bigblock" id="bwork">Adjustments</li>		<!-- 13 -->
+	<li class="bigblock" id="bwork">Adjustments</li>		<!-- 14 -->
+	<li class="bigblock" id="bwork">Presentation</li>		<!-- 15 -->
+	<li class="bigblock" id="boff">&nbsp;</li>			<!-- 16 -->
+	<li class="bigblock" id="boff">&nbsp;</li>			<!-- 17 -->
+	<li class="bigblock" id="bwork">Preparation</li>		<!-- 18 -->
+	<li class="bigblock" id="bwork">Preparation</li>		<!-- 19 -->
+	<li class="bigblock" id="bwork">Presentation</li>		<!-- 20 -->
+	<li class="bigblock" id="bwork">Evaluation</li>		<!-- 21 -->
+</ul>
+<ul class="line" id="thesis">
+	<li class="bigblock" id="boff"></li>							<!-- 1 --> 
+	<li class="bigblock" id="boff"></li>							<!-- 2 --> 
+	<li class="bigblock" id="bthesis">Receive guidelines</li>		<!-- 3 --> 
+	<li class="bigblock" id="bthesis">Write</li>					<!-- 4 --> 
+	<li class="bigblock" id="bthesis">Write</li>					<!-- 5 --> 
+	<li class="bigblock" id="bthesis">Write</li>					<!-- 6 --> 
+	<li class="bigblock" id="bthesis">Write</li>					<!-- 7 --> 
+	<li class="bigblock" id="bthesis">Write</li>					<!-- 8 --> 
+	<li class="bigblock" id="bthesis">Write</li>					<!-- 9 --> 
+	<li class="bigblock" id="bthesis">Write</li>					<!-- 10 -->
+	<li class="bigblock" id="bthesis">Write</li>					<!-- 11 -->
+	<li class="bigblock" id="bthesis">First version to Guus</li>	<!-- 12 -->
+	<li class="bigblock" id="bthesis">More versions to Guus</li>	<!-- 13 -->
+	<li class="bigblock" id="bthesis">More versions to Guus</li>	<!-- 14 -->
+	<li class="bigblock" id="bthesis">Evaluation</li>				<!-- 15 -->
+	<li class="bigblock" id="boff"></li>							<!-- 16 -->
+	<li class="bigblock" id="bthesis">Write</li>					<!-- 17 -->
+	<li class="bigblock" id="bthesis">Write</li>					<!-- 18 -->
+	<li class="bigblock" id="bthesis">Finish</li>					<!-- 19 -->
+	<li class="bigblock" id="boff"></li>							<!-- 20 -->
+	<li class="bigblock" id="bthesis">Evaluate</li>				<!-- 21 -->
+</ul>
+<ul class="line" id="sketching">
+	<li class="lilblock" id="boff"></li>							<!-- 1 --> 
+	<li class="lilblock" id="boff"></li>							<!-- 2 --> 
+	<li class="lilblock" id="bsketch">(1) Heavy Duty Radio</li>		<!-- 3 --> 
+	<li class="lilblock" id="bsketch">(2) USB sticks en inkleuroefening</li>					<!-- 4 --> 
+	<li class="lilblock" id="bsketch">(3) Strijkijzer</li>					<!-- 5 --> 
+	<li class="lilblock" id="bsketch">(4) Ventilator</li>					<!-- 6 --> 
+	<li class="lilblock" id="bsketch">(5) Glas</li>					<!-- 7 --> 
+	<li class="lilblock" id="bsketch">(6) Kettingzaag</li>					<!-- 8 --> 
+	<li class="lilblock" id="bsketch">(7) Koffiezetter</li>					<!-- 9 --> 
+	<li class="lilblock" id="boff"></li>					<!-- 10 -->
+	<li class="lilblock" id="boff"></li>					<!-- 11 -->
+	<li class="lilblock" id="boff"></li>	<!-- 12 -->
+	<li class="lilblock" id="boff"></li>	<!-- 13 -->
+	<li class="lilblock" id="boff"></li>	<!-- 14 -->
+	<li class="lilblock" id="boff"></li>				<!-- 15 -->
+	<li class="lilblock" id="boff"></li>							<!-- 16 -->
+	<li class="lilblock" id="boff"></li>					<!-- 17 -->
+	<li class="lilblock" id="bsketch">Portfolio inleveren</li>					<!-- 18 -->
+	<li class="lilblock" id="bsketch">Portfolio evalueren</li>					<!-- 19 -->
+	<li class="lilblock" id="boff"></li>							<!-- 20 -->
+	<li class="lilblock" id="boff"></li>				<!-- 21 -->
+</ul>
+<ul class="line" id="essays">
+	<li class="lilblock" id="boff"></li>						<!-- 1 -->  
+	<li class="lilblock" id="boff"></li>						<!-- 2 -->  
+	<li class="lilblock" id="boff"></li>						<!-- 3 -->  
+	<li class="lilblock" id="bessay">Essay taalverandering</li>						<!-- 4 -->  
+	<li class="lilblock" id="bessay">Essay taalverandering</li>						<!-- 5 -->  
+	<li class="lilblock" id="boff"></li>						<!-- 6 -->  
+	<li class="lilblock" id="bessay">Essay milieu/gezondheid/arbeid</li>						<!-- 7 -->  
+	<li class="lilblock" id="bessay">Essay milieu/gezondheid/arbeid</li>						<!-- 8 -->  
+	<li class="lilblock" id="boff"></li>						<!-- 9 -->  
+	<li class="lilblock" id="boff"></li>						<!-- 10 --> 
+	<li class="lilblock" id="boff"></li>						<!-- 11 --> 
+	<li class="lilblock" id="boff"></li>						<!-- 12 --> 
+	<li class="lilblock" id="boff"></li>						<!-- 13 --> 
+	<li class="lilblock" id="boff"></li>						<!-- 14 --> 
+	<li class="lilblock" id="boff"></li>						<!-- 15 --> 
+	<li class="lilblock" id="boff"></li>						<!-- 16 --> 
+	<li class="lilblock" id="boff"></li>						<!-- 17 --> 
+	<li class="lilblock" id="boff"></li>						<!-- 18 --> 
+	<li class="lilblock" id="boff"></li>						<!-- 19 --> 
+	<li class="lilblock" id="boff"></li>						<!-- 20 --> 
+	<li class="lilblock" id="boff"></li>						<!-- 21 --> 
+</ul>
+<ul class="line" id="times_oamk">
+	<li class="lilblock" id="boamk"></li>						<!-- 1 -->  
+	<li class="lilblock" id="boamk"></li>						<!-- 2 -->  
+	<li class="lilblock" id="boamk"></li>						<!-- 3 -->  
+	<li class="lilblock" id="boff">holiday</li>				<!-- 4 -->  
+	<li class="lilblock" id="boamk"></li>						<!-- 5 -->  
+	<li class="lilblock" id="boamk"></li>						<!-- 6 -->  
+	<li class="lilblock" id="boamk"></li>						<!-- 7 -->  
+	<li class="lilblock" id="boamk"></li>						<!-- 8 -->  
+	<li class="lilblock" id="boamk"></li>						<!-- 9 -->  
+	<li class="lilblock" id="boamk"></li>						<!-- 10 --> 
+	<li class="lilblock" id="boamk"></li>						<!-- 11 --> 
+	<li class="lilblock" id="boamk"></li>						<!-- 12 --> 
+	<li class="lilblock" id="boamk"></li>						<!-- 13 --> 
+	<li class="lilblock" id="boamk"></li>						<!-- 14 --> 
+	<li class="lilblock" id="boamk"></li>						<!-- 15 --> 
+	<li class="lilblock" id="boamk"></li>						<!-- 16 --> 
+	<li class="lilblock" id="boamk"></li>						<!-- 17 --> 
+	<li class="lilblock" id="boamk"></li>						<!-- 18 --> 
+	<li class="lilblock" id="boamk"></li>						<!-- 19 --> 
+	<li class="lilblock" id="boamk"></li>						<!-- 20 --> 
+	<li class="lilblock" id="boamk"></li>						<!-- 21 --> 
+</ul>
+<ul class="line" id="times_sax">
+	<li class="lilblock" id="bsax"></li>						<!-- 1 -->  
+	<li class="lilblock" id="boff">holiday</li>						<!-- 2 -->  
+	<li class="lilblock" id="bsax"></li>						<!-- 3 -->  
+	<li class="lilblock" id="bsax"></li>						<!-- 4 -->  
+	<li class="lilblock" id="bsax"></li>						<!-- 5 -->  
+	<li class="lilblock" id="bsax"></li>						<!-- 6 -->  
+	<li class="lilblock" id="bsax"></li>						<!-- 7 -->  
+	<li class="lilblock" id="bsax"></li>						<!-- 8 -->  
+	<li class="lilblock" id="bsax"></li>						<!-- 9 -->  
+	<li class="lilblock" id="bsax"></li>						<!-- 10 --> 
+	<li class="lilblock" id="bsax"></li>						<!-- 11 --> 
+	<li class="lilblock" id="bsax"></li>						<!-- 12 --> 
+	<li class="lilblock" id="bsax"></li>						<!-- 13 --> 
+	<li class="lilblock" id="bsax"></li>						<!-- 14 --> 
+	<li class="lilblock" id="bsax"></li>						<!-- 15 --> 
+	<li class="lilblock" id="bsax"></li>						<!-- 16 --> 
+	<li class="lilblock" id="bsax"></li>						<!-- 17 --> 
+	<li class="lilblock" id="bsax"></li>						<!-- 18 --> 
+	<li class="lilblock" id="bsax"></li>						<!-- 19 --> 
+	<li class="lilblock" id="bsax"></li>						<!-- 20 --> 
+	<li class="lilblock" id="bsax"></li>						<!-- 21 --> 
+</ul>
+<div class="line" id="blockref"></div>
+</div>
+<img class="sidel" src="gfx/sidel.png" />
+<img class="sider" src="gfx/sider.png" />
+
+<h5>Press F11<br>for<br>fullscreen</h5>
+</body>
+</html>
